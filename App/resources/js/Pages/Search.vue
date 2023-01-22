@@ -94,7 +94,7 @@ export default {
   },
   methods: {
     search() {
-      axios.get('http://127.0.0.1:8000/api/search_tracks?name=' + band.value)
+      axios.get(window.location.origin +'/api/search_tracks?name=' + band.value)
         .then((res) => {
           this.infos = res.data.track
 
@@ -105,7 +105,7 @@ export default {
     },
 
     fav(artistName, trackId, user, trackName) {
-      axios.post('http://127.0.0.1:8000/api/fav', {
+      axios.post(window.location.origin + '/api/fav', {
         "artistName": artistName,
         "trackId": trackId,
         "trackName": trackName,
