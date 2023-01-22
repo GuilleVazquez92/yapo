@@ -64,3 +64,7 @@ This post request receives the following arguments in JSON format :artistName, t
 "usuario" : "sebastian",
 "ranking" : "5/5"
 }
+
+### Run test
+Go to the App folder and run the following command:
+* php artisan test
