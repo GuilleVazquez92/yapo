@@ -5,9 +5,10 @@
   <breeze-authenticated-layout>
     <div class="card my-4 shadow-sm">
       <div class="card-body container">
-        <h4 v-if="favourite.artistName"> <b>Su musica Favorita es : </b> {{ favourite.trackName }} <br> <b>Artista :</b> {{
-          favourite.artistName
-        }}</h4>
+        <h4 v-if="favourite.artistName"> <b>Su musica Favorita es : </b> {{ favourite.trackName }} <br> <b>Artista :</b>
+          {{
+            favourite.artistName
+          }}</h4>
         <h4 v-else>No selecciono su Música favorita</h4>
       </div>
     </div>
@@ -94,7 +95,7 @@ export default {
   },
   methods: {
     search() {
-      axios.get(window.location.origin +'/api/search_tracks?name=' + band.value)
+      axios.get(window.location.origin + '/api/search_tracks?name=' + band.value)
         .then((res) => {
           this.infos = res.data.track
 
